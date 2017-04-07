@@ -16,22 +16,19 @@ var answer = [];
 var guessesLeft = 10;
 var lettersAlreadyGuessed = [];
 
+var winsEl = document.getElementById("wins");
+
+
 // This selects the challenge to guess.
 var words = ["word1", "word2", "word3", "word4", "word5", "word6",]
 var setChallenge = Math.floor(Math.random()*words.length);
 console.log(setChallenge);
 
 // This grabs the elements ont he html page
-var winsEl = document.getElementById("#wins");
-var guessesRemainingEl = document.getElementById("#guessesRemaining");
-var GuessedLettersEl = document.getElementById("#guessedLetters");
-var theWordEl = document.getElementById("#theWord");
+
 
 function startGame() {
-	winsEl = wins;
-	guessesRemainingEl = guessesLeft;
-	GuessedLettersEl = lettersAlreadyGuessed;
-	theWordEl = answer;
+	winsEl.innerHTML = wins;
 }
 
 
